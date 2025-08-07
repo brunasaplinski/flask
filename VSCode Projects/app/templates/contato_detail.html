@@ -1,7 +1,32 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% block content %}
 
-{{id}}
+<div class="container">
+    
+    <div class="row">
+
+        <div class="col-md-6 mt-3">
+            Nome:
+            <input type="text" value="{{ obj.nome }}" class="form-control bg-secondary text-white" readonly>
+        </div>
+
+        <div class="col-md-6 mt-3">
+            E-mail:
+            <input type="text" value="{{ obj.email }}" class="form-control bg-secondary text-white" readonly>
+        </div>
+
+        <div class="col-md-6 mt-3">
+            Assunto:
+            <input type="text" value="{{ obj.assunto }}" class="form-control bg-secondary text-white" readonly>
+        </div>
+
+        <div class="col-md-6 mt-3">
+            Mensagem:
+            <textarea class="form-control bg-secondary text-white" rows="5" readonly>{{ obj.mensagem }}</textarea>
+        </div>
+
+    </div>
+</div>
 
 {% endblock %}
